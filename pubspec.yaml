@@ -1,0 +1,54 @@
+name: tiqora
+description: "Tiqora - Guarda tus tickets, no pierdas tus garantías."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Estado de la app
+  provider: ^6.1.2
+
+  # Persistencia local (base de datos)
+  sqflite: ^2.3.3
+  path_provider: ^2.1.3
+  path: ^1.9.0
+
+  # Cámara y galería
+  image_picker: ^1.1.2
+
+  # OCR (lectura de texto en imágenes) - funciona offline, usa ML Kit de Google
+  google_mlkit_text_recognition: ^0.13.0
+
+  # Notificaciones locales
+  flutter_local_notifications: ^17.2.2
+  timezone: ^0.9.4
+
+  # Formato de fechas en español
+  intl: ^0.19.0
+
+  # Generar y compartir el PDF/email de reclamación
+  pdf: ^3.11.0
+  share_plus: ^9.0.0
+  printing: ^5.13.1
+
+  # Compras dentro de la app (suscripción Premium)
+  in_app_purchase: ^3.2.0
+
+  # Iconos
+  flutter_svg: ^2.0.10+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
