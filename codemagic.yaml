@@ -8,6 +8,13 @@ workflows:
       - name: Generar carpetas de la plataforma
         script: |
           flutter create --platforms=android .
+      - name: Activar desugaring en Android
+        script: |
+          sed -i '' 's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' android/app/build.gradle.kts
+          echo "" >> android/app/build.gradle.kts
+          echo "dependencies {" >> android/app/build.gradle.kts
+          echo "    coreLibraryDesugaring(\"com.android.tools:desugar_jdk_libs:2.0.4\")" >> android/app/build.gradle.kts
+          echo "}" >> android/app/build.gradle.kts
       - name: Descargar dependencias
         script: |
           flutter pub get
