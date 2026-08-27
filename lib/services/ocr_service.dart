@@ -48,7 +48,7 @@ class OcrService {
           var anio = int.parse(match.group(3)!);
           if (anio < 100) anio += 2000;
 
-          if (dia in12(1, 31) && mes in12(1, 12)) {
+        if (dia.in12(1, 31) && mes.in12(1, 12)) {
             return DateTime(anio, mes, dia);
           }
         } catch (_) {
